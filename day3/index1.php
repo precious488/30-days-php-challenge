@@ -36,7 +36,7 @@ include 'index.php';
         }
         .result{
             margin: auto;
-            width: 20%;
+            width: 50%;
             padding: 10px;
             height:100px;
             background-color:lightblue;

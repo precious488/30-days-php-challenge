@@ -29,13 +29,12 @@ switch($operator){
         $value =$num1 % $num2;
     break;
     case "sqrt":
-        $value = sqrt($num1) ;
+        $value = sqrt($num1);
     case "^":
         $value =$num1 ^ $num2;
         break;
     default:
     echo "invalid";
-    round(int($value), 4);
         echo $value;
 }
 //echo $value;
