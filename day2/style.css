@@ -1,0 +1,33 @@
+   
+        body{
+           
+           
+            background-color: gray;
+
+        }
+        .cotainer{
+            background-color: whitesmoke;
+            padding-top: 25%;
+            margin: auto;
+            width: 50%;
+            border-radius: 20px;   
+             padding: 100px;
+ 
+
+        }
+        input{
+            width: 100%;
+            padding: 12px 20px;
+            margin:8px 0;
+            box-sizing: border-box;
+            
+        }
+        h1{
+            color: green;
+            font-weight: bold;
+
+        }
+        label{
+            color: green;
+            font-weight: bold;
+        }
