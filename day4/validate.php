@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $password = $_POST['password'];
 
 
-       // validate($username, $password);
+        validate($username, $password);
     }
     if(validate($username, $password)==true){
         header("location: welcome.php");
