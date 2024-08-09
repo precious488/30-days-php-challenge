@@ -10,12 +10,20 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $password = $_POST['password'];
 
 
-        validate($username, $password);
-
-        header("location: login.php");
-
+       // validate($username, $password);
     }
+    if(validate($username, $password)==true){
+        header("location: welcome.php");
+        
+    }else{
+       
+        header("location: login.php");
+    }        
+
 }
+
+    
+
 
 function validate(string $username, string $password){
     
@@ -57,7 +65,6 @@ function validate(string $username, string $password){
 
 
     
-
-    
 }
+
 
