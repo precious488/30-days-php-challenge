@@ -11,16 +11,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 
         validate($username, $password);
-    }
-    if(validate($username, $password)==true){
-        header("location: welcome.php");
-        
-    }else{
-       
+    
         header("location: login.php");
-    }        
+        
 
-}
+       
+    } 
+}       
+
+
 
     
 

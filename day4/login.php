@@ -57,9 +57,9 @@ session_start();
         <p>log in</p>
         <form action="validate.php" method="post">
             <label for="name">username:</label><br>
-            <input type="text" name="username" placeholder="enter your name"><br>
+            <input type="text" name="username" placeholder="enter your name" ><br>
             <label for="password">password:</label><br>
-            <input type="password" name="password" placeholder="enter your password"><br>
+            <input type="password" name="password" placeholder="enter your password" ><br>
             <small style="color: red">
         <?php 
             if(isset($_SESSION['passwordLower'])){
