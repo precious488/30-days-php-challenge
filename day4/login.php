@@ -71,6 +71,13 @@ session_start();
             if(isset($_SESSION['passwordNumber'])){
                 echo $_SESSION['passwordNumber'];
             }
+            if(isset($_SESION['password_length'])){
+                echo $_SESSION['password_length'];
+            }
+
+            if(isset($_SESSION['passwordSpecialChar'])){
+                echo $_SESSION['passwordSpecialChar'];
+            }
         ?>   
         </small><br>
             <button type="submit" name="login">submit</button><br>
@@ -81,8 +88,8 @@ session_start();
                 echo $_SESSION['username_and_password'];
             }
 
-            if(isset($_SESSION['length'])){
-                echo $_SESSION['length'];
+            if(isset($_SESSION['username_length'])){
+                echo $_SESSION['username_length'];
             }
         ?> 
           
@@ -100,8 +107,8 @@ session_start();
             if(isset($_SESSION['username_and_password'])){
                 unset($_SESSION['username_and_password']);
              }
-             if(isset($_SESSION['length'])){
-                unset($_SESSION['length']);
+             if(isset($_SESSION['password_lenght'])){
+                unset($_SESSION['password_lenght']);
              }
         ?> 
     </div>
