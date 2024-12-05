@@ -26,13 +26,22 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 function validate(string $username, string $password){
     
-    if($password == '' || $username == ''){
+    if($password == '' || $username == ''){ // checks for empty password: GOOD
         $_SESSION["username_and_password"] ="Username and Password can not be empty";
     }
 
-    if(strlen($password) < 3 || strlen($username) < 3){
-        $_SESSION["length"] = "Username and Password can not be less than 3 characters";
+    if(strlen($password) < 8){
+        $_SESSION["password_length"] = "Password can not be less than 8 characters";
     }
+
+    if(strlen($username) < 5 || strlen($username) > 15 ){
+         $_SESSION["username_length"] = "Username must be between 5 and 15 characters";
+    }
+
+    if(hasSpecialChars($password) == 0){
+         $_SESSION["passwordSpecialChar"] = "The password must have a special char";
+    }
+        
 
     $hasLowerCase = false;
     $hasNumber = false;
@@ -63,7 +72,10 @@ function validate(string $username, string $password){
     }
 
 
-    
 }
 
+
+function hasSpecialChars($str) {
+    return preg_match('/[^a-zA-Z0-9]/', $str) > 0;
+}
 
